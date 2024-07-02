@@ -28,9 +28,9 @@ function styles() {
 
 // Tarefa para comprimir imagens
 function images() {
-    return gulp.src(paths.images.src)
+    return gulp.src('./src/images/*', {encoding: false})
         .pipe(imagemin())
-        .pipe(gulp.dest(paths.images.dest));
+        .pipe(gulp.dest('./dist/images'));
 }
 
 // Tarefa para comprimir JavaScript
